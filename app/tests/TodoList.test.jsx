@@ -20,6 +20,7 @@ describe('TodoList', () => {
     }];
       var todoList = TestUtils.renderIntoDocument(<TodoList todos = {todos}/>);
       var todosComponents = TestUtils.scryRenderedComponentsWithType(todoList,Todo);
-      //It Tells how many times component render to Todo ;      expect(todosComponents.length).toBe(todos.length);
+      //It Tells how many times component render to Todo ;
+        expect(todosComponents.length).toBe(todos.length);
   });
 });
