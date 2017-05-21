@@ -32,8 +32,6 @@ var TodoApp = React.createClass({
           searchText: searchText.toLowerCase()
         });
 
-      
-
     },
     render: function(){
       var {todos} = this.state;
