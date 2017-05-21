@@ -34,7 +34,6 @@ describe('AddTodo', () => {
 
     addTodo.refs.todoText.value = todoText;
     TestUtils.Simulate.submit($el.find('form')[0]);
-
     expect(spy).toNotHaveBeenCalled();
 
   });
