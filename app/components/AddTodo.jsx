@@ -15,7 +15,7 @@ handleSubmit: function(e){
 },
   render: function(){
     return(
-        <div>
+        <div className = "container__footer">
           <form onSubmit = {this.handleSubmit}>
             <input type = "text" ref = "todoText" placeholder = "What you need to do?"/>
             <button className = "button hollow expanded">Submit</button>
