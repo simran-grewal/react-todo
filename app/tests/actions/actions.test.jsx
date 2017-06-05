@@ -20,4 +20,14 @@ describe('Actions', () => {
     var res = actions.addTodo(action.text);
     expect(res).toEqual(action);
   });
+
+
+  if('It should geeneratte Toggle show completed', () => {
+    var action = {
+      type: 'TOGGLE_SHOW_COMPLETED'
+    };
+
+    var res = actions.toggleShowCompleted();
+    expect(res).toEqual(action);
+  });
 });
