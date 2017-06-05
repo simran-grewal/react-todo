@@ -3,11 +3,25 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var TodoApp = require('TodoApp');
 
-// Load Foundation
-// require('style!css!foundation-sites/dist/foundation.min.css')
+var actions = require('actions');
+var store = require('configureStore').configure();
 
+
+store.subscribe(() => {
+  console.log('New state', store.getState());
+});
+
+
+store.dispatch(actions.addTodo('simran'));
+store.dispatch(actions.addTodo('Harman'));
+
+store.dispatch(actions.toggleShowCompleted());
+store.dispatch(actions.setSearchText('Clean the Yard'));
+
+//Load Foundation
 $(document).foundation();
-//APP css
+
+//App CSS
 require('style!css!sass!applicationStyles')
 
 
