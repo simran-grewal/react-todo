@@ -34,7 +34,7 @@ describe('Reducers', () => {
           text: 'Walk the dog'
         };
 
-        var res = reducers.todoReducer(df([]), df(action));
+        var res = reducers.todosReducer(df([]), df(action));
 
         expect(res.length).toEqual(1);
         expect(res[0].text).toEqual(action.text);
@@ -55,7 +55,7 @@ describe('Reducers', () => {
               completedAt:1212
             }
           ];
-          var res = reducers.todoReducer(df(arr), df(action));
+          var res = reducers.todosReducer(df(arr), df(action));
           expect(res[0].id).toEqual(arr[0].id);
           expect(res[0].completed).toEqual(false);
           expect(res[0].completedAt).toEqual(undefined);

@@ -3,7 +3,10 @@ var ReactDOM = require('react-dom');
 var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils = require('react-addons-test-utils');
-var TodoList = require('TodoList');
+//var TodoList = require('TodoList');
+
+import ConnectedTodoList, {TodoList} from 'TodoList'
+
 var Todo = require('Todo');
 describe('TodoList', () => {
   it('Todo List should exist', () => {
