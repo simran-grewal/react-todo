@@ -23,23 +23,15 @@ export var todosReducer =  (state = [], action) => {
     case 'ADD_TODO':
           return [
             ...state,
-            {
-              id: uuid(),
-              text: action.text,
-              completed: false,
-              createdAt: moment().unix(),
-              completedAt: undefined
-            }
+            action.todo
           ];
-    case 'TOGGLE_TODO':
+    case 'UPDATE_TODO':
           return state.map((todo) => {
             if(todo.id == action.id) {
-              var newCompleted = !todo.completed;
               return {
-                ...todo,
-                completed: newCompleted,
-                completedAt: newCompleted?moment().unix():undefined
-              };
+              ...todo,
+              ...action.updates
+            }
             } else {
               return todo;
             }
